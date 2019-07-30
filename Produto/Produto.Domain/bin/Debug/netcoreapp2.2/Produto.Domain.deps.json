@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "42bd4c1d0863a8fc17ab1b08edd8fbe3c157ac29"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Produto.Domain/1.0.0": {
+        "dependencies": {
+          "Flunt": "1.0.3",
+          "Produto.Shared": "1.0.0"
+        },
+        "runtime": {
+          "Produto.Domain.dll": {}
+        }
+      },
+      "Flunt/1.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/4.5.0": {},
+      "Produto.Shared/1.0.0": {
+        "dependencies": {
+          "Flunt": "1.0.3",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "runtime": {
+          "Produto.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Produto.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Flunt/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7/wzY8uowlaM5Xydj428PdF1yp1bfuSEm5ONqnx4xiEbPv/zfGLNQoJQVNzU7cqmt3MmvJEGrCCEg7T1NHFdmA==",
+      "path": "flunt/1.0.3",
+      "hashPath": "flunt.1.0.3.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
+      "path": "system.componentmodel.annotations/4.5.0",
+      "hashPath": "system.componentmodel.annotations.4.5.0.nupkg.sha512"
+    },
+    "Produto.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

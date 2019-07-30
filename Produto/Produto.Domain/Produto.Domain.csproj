@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+ <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.3" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Produto.Shared\Produto.Shared.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+</Project>

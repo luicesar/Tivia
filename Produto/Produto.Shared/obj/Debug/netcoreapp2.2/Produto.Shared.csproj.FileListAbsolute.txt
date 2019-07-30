@@ -1,0 +1,9 @@
+D:\Tivia\Produto\Produto.Shared\bin\Debug\netcoreapp2.2\Produto.Shared.deps.json
+D:\Tivia\Produto\Produto.Shared\bin\Debug\netcoreapp2.2\Produto.Shared.dll
+D:\Tivia\Produto\Produto.Shared\bin\Debug\netcoreapp2.2\Produto.Shared.pdb
+D:\Tivia\Produto\Produto.Shared\obj\Debug\netcoreapp2.2\Produto.Shared.csprojAssemblyReference.cache
+D:\Tivia\Produto\Produto.Shared\obj\Debug\netcoreapp2.2\Produto.Shared.csproj.CoreCompileInputs.cache
+D:\Tivia\Produto\Produto.Shared\obj\Debug\netcoreapp2.2\Produto.Shared.AssemblyInfoInputs.cache
+D:\Tivia\Produto\Produto.Shared\obj\Debug\netcoreapp2.2\Produto.Shared.AssemblyInfo.cs
+D:\Tivia\Produto\Produto.Shared\obj\Debug\netcoreapp2.2\Produto.Shared.dll
+D:\Tivia\Produto\Produto.Shared\obj\Debug\netcoreapp2.2\Produto.Shared.pdb

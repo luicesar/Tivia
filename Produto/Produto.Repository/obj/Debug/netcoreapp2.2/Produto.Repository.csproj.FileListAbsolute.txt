@@ -1,0 +1,16 @@
+D:\Tivia\Produto\Produto.Repository\obj\Debug\netcoreapp2.2\Produto.Repository.csprojAssemblyReference.cache
+D:\Tivia\Produto\Produto.Repository\obj\Debug\netcoreapp2.2\Produto.Repository.csproj.CoreCompileInputs.cache
+D:\Tivia\Produto\Produto.Repository\obj\Debug\netcoreapp2.2\Produto.Repository.AssemblyInfoInputs.cache
+D:\Tivia\Produto\Produto.Repository\obj\Debug\netcoreapp2.2\Produto.Repository.AssemblyInfo.cs
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Repository.deps.json
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Repository.runtimeconfig.json
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Repository.runtimeconfig.dev.json
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Repository.dll
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Repository.pdb
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Domain.dll
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Shared.dll
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Domain.pdb
+D:\Tivia\Produto\Produto.Repository\bin\Debug\netcoreapp2.2\Produto.Shared.pdb
+D:\Tivia\Produto\Produto.Repository\obj\Debug\netcoreapp2.2\Produto.Repository.csproj.CopyComplete
+D:\Tivia\Produto\Produto.Repository\obj\Debug\netcoreapp2.2\Produto.Repository.dll
+D:\Tivia\Produto\Produto.Repository\obj\Debug\netcoreapp2.2\Produto.Repository.pdb
