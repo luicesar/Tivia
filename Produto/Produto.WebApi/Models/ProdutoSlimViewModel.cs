@@ -7,10 +7,11 @@ using Produto.Domain.Entities;
 using Produto.WebApi.Models;
 
 namespace Produto.WebApi.Models {
-  public class ProdutoViewModel : Model<ProdutoDomain> {
+  public class ProdutoSlimViewModel {
     public string Nome { get; set; }
     public string Descricao { get; set; }
     public decimal Preco { get; set; }
     public int CategoriaId { get; set; }
+    public string CategoriaNome { get; set; }
   }
 }

@@ -21,7 +21,7 @@ namespace Produto.Domain.Entities {
         .Requires ()
         .IsNotNullOrEmpty (Nome, "Produto.Nome", "O campo nome é obrigatório")
         .IsNotNullOrEmpty (Descricao, "Produto.Descricao", "O campo descricao é obrigatório")
-        .IsGreaterThan (CategoriaId, 0, "Produto.CategoriaId", "Informe um produto.")
+        .IsGreaterThan (CategoriaId, 0, "Produto.CategoriaId", "Informe uma categoria.")
         .IsGreaterThan (Preco, 0, "Produto.Preco", "O campo preco deve ser informado")
       );
     }

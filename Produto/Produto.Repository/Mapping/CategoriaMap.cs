@@ -7,7 +7,6 @@ namespace Produto.Repository.Mapping {
     public void Configure (EntityTypeBuilder<CategoriaDomain> builder) {
       builder.Property (t => t.ID).IsRequired ().HasColumnType ("int");
       builder.Property (t => t.Nome).IsRequired ().HasColumnType ("varchar(100)");
-      builder.Property (t => t.Descricao).IsRequired ().HasColumnType ("varchar(500)");
       builder.Property (t => t.DataCriacao).HasColumnType ("datetime");
 
       builder.HasMany (x => x.Produtos).WithOne (x => x.Categoria)
