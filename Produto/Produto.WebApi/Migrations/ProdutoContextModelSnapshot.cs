@@ -6,75 +6,69 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Produto.Repository.DataContext;
 
-namespace Produto.WebApi.Migrations
-{
-    [DbContext(typeof(ProdutoContext))]
-    partial class ProdutoContextModelSnapshot : ModelSnapshot
-    {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
+namespace Produto.WebApi.Migrations {
+    [DbContext (typeof (ProdutoDataContext))]
+    partial class ProdutoContextModelSnapshot : ModelSnapshot {
+        protected override void BuildModel (ModelBuilder modelBuilder) {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.3-servicing-35854")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation ("ProductVersion", "2.2.3-servicing-35854")
+                .HasAnnotation ("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation ("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Produto.Domain.Entities.CategoriaDomain", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            modelBuilder.Entity ("Produto.Domain.Entities.CategoriaDomain", b => {
+                b.Property<int> ("ID")
+                    .ValueGeneratedOnAdd ()
+                    .HasColumnType ("int")
+                    .HasAnnotation ("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("datetime");
+                b.Property<DateTime> ("DataCriacao")
+                    .HasColumnType ("datetime");
 
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("varchar(100)");
+                b.Property<string> ("Nome")
+                    .IsRequired ()
+                    .HasColumnType ("varchar(100)");
 
-                    b.HasKey("ID");
+                b.HasKey ("ID");
 
-                    b.ToTable("Categoria");
-                });
+                b.ToTable ("Categoria");
+            });
 
-            modelBuilder.Entity("Produto.Domain.Entities.ProdutoDomain", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            modelBuilder.Entity ("Produto.Domain.Entities.ProdutoDomain", b => {
+                b.Property<int> ("ID")
+                    .ValueGeneratedOnAdd ()
+                    .HasColumnType ("int")
+                    .HasAnnotation ("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoriaId");
+                b.Property<int> ("CategoriaId");
 
-                    b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("datetime");
+                b.Property<DateTime> ("DataCriacao")
+                    .HasColumnType ("datetime");
 
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("varchar(500)");
+                b.Property<string> ("Descricao")
+                    .IsRequired ()
+                    .HasColumnType ("varchar(500)");
 
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("varchar(100)");
+                b.Property<string> ("Nome")
+                    .IsRequired ()
+                    .HasColumnType ("varchar(100)");
 
-                    b.Property<decimal>("Preco")
-                        .HasColumnType("decimal(15,2)");
+                b.Property<decimal> ("Preco")
+                    .HasColumnType ("decimal(15,2)");
 
-                    b.HasKey("ID");
+                b.HasKey ("ID");
 
-                    b.HasIndex("CategoriaId");
+                b.HasIndex ("CategoriaId");
 
-                    b.ToTable("Produto");
-                });
+                b.ToTable ("Produto");
+            });
 
-            modelBuilder.Entity("Produto.Domain.Entities.ProdutoDomain", b =>
-                {
-                    b.HasOne("Produto.Domain.Entities.CategoriaDomain", "Categoria")
-                        .WithMany("Produtos")
-                        .HasForeignKey("CategoriaId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
+            modelBuilder.Entity ("Produto.Domain.Entities.ProdutoDomain", b => {
+                b.HasOne ("Produto.Domain.Entities.CategoriaDomain", "Categoria")
+                    .WithMany ("Produtos")
+                    .HasForeignKey ("CategoriaId")
+                    .OnDelete (DeleteBehavior.Cascade);
+            });
 #pragma warning restore 612, 618
         }
     }

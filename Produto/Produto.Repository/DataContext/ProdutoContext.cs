@@ -7,11 +7,11 @@ using Produto.Repository.Mapping;
 
 namespace Produto.Repository.DataContext {
 
-  public class ProdutoContext : DbContext {
+  public class ProdutoDataContext : DbContext {
     public DbSet<CategoriaDomain> Categoria { get; set; }
     public DbSet<ProdutoDomain> Produto { get; set; }
 
-    public ProdutoContext (DbContextOptions<ProdutoContext> options):
+    public ProdutoDataContext (DbContextOptions<ProdutoDataContext> options):
       base (options) {
 
       }

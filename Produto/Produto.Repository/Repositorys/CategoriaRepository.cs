@@ -9,8 +9,8 @@ using Produto.Repository.Interfaces;
 
 namespace Produto.Repository.Repositorys {
   public class CategoriaRepository : RepositoryBase<CategoriaDomain>, ICategoriaRepository {
-    ProdutoContext Dbcontext;
-    public CategoriaRepository (ProdutoContext dbcontext) : base (dbcontext) {
+    ProdutoDataContext Dbcontext;
+    public CategoriaRepository (ProdutoDataContext dbcontext) : base (dbcontext) {
       this.Dbcontext = dbcontext;
     }
   }

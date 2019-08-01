@@ -8,17 +8,17 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Produto.WebApi
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateWebHostBuilder(args).Build().Run();
+namespace Produto.WebApi {
+    public class Program {
+        public static void Main (string[] args) {
+            CreateWebHostBuilder (args).Run ();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public static IWebHost CreateWebHostBuilder (string[] args) =>
+            WebHost.CreateDefaultBuilder (args)
+            .UseUrls ("http://localhost:5000")
+            .UseSetting (WebHostDefaults.DetailedErrorsKey, "true")
+            .UseStartup<Startup> ()
+            .Build ();
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Produto.Domain.Entities;
 using Produto.Repository.Interfaces;
@@ -9,7 +10,7 @@ using Produto.Shared.Repository;
 using Produto.WebApi.Models;
 
 namespace Produto.WebApi.Controllers {
-    [Route ("api/[controller]")]
+    [Authorize ("Bearer"), Route ("api/[controller]")]
     public class ProdutoController : ControllerBase<ProdutoDomain, ProdutoViewModel> {
         private readonly IProdutoRepository repository;
         public ProdutoController (IProdutoRepository repository) : base (repository) {
