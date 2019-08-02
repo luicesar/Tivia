@@ -29,13 +29,9 @@ namespace Produto.WebApi.Controllers {
 
     }
 
-    [HttpGet, AllowAnonymous, Route ("info")]
+    [HttpGet, Route ("info")]
     public string InformacoesDoUsuarioLogado () {
-
-      //var usuario = AuthIdenty.UsuarioLogado (User)?.UID;
-      var usuario = "";
-
-      return usuario;
+      return AuthIdenty.UsuarioLogado (User)?.UID;
     }
 
     [HttpPost, AllowAnonymous, Route ("auth")]
@@ -54,7 +50,8 @@ namespace Produto.WebApi.Controllers {
       );
 
       DateTime dataCriacao = DateTime.Now;
-      DateTime dataExpiracao = DateTime.Now.AddDays (365);
+      DateTime dataExpiracao = dataCriacao.AddMinutes (3);
+      user.DataExpiracao = dataExpiracao;
 
       var signinCredentials = new SigningCredentials (
         new SymmetricSecurityKey (Encoding.UTF8.GetBytes (tokenConfigurations.SecretyKey)),
