@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+.section {
+  max-width: 900px;
+  margin: 0px 0px 0px 105px;
+  border: 0px;
+}
+
+.flex {
+  display: flex;
+}
+
+.item {
+  margin: 15px;
+  text-align: justify;
+  font-size: 1.5em;
+}
+
+.item.token strong {
+  margin: -50px 0px 0px 155px;
+  font-size: 1.5em;
+}
+
+.item.token p {
+  margin: -40px 0px 0px 380px;
+  font-size: 0.95em;
+}
+
+.item.minute strong {
+  margin: -50px 0px 0px 130px;
+  font-size: 1.5em;
+}
+
+.item.minute p {
+  margin: -40px 0px 0px 455px;
+  font-size: 0.95em;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-item-1 {
+  flex: 1;
+}

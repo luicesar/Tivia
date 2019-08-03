@@ -29,6 +29,7 @@ namespace Produto.WebApi.Controllers {
             foreach (var item in produtos) {
 
                 var prodView = new ProdutoSlimViewModel {
+                    Id = item.ID,
                     Nome = item.Nome,
                     Descricao = item.Descricao,
                     Preco = item.Preco,

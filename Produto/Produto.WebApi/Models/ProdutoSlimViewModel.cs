@@ -8,6 +8,7 @@ using Produto.WebApi.Models;
 
 namespace Produto.WebApi.Models {
   public class ProdutoSlimViewModel {
+    public int Id { get; set; }
     public string Nome { get; set; }
     public string Descricao { get; set; }
     public decimal Preco { get; set; }
