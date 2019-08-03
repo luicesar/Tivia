@@ -1,40 +1,44 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Button, Table } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import api from "../src/services/api";
+import { Button, Table } from "reactstrap";
+import ListHeader from "../src/components/listHeader";
+import ProductList from "../src/components/productList";
 
 class App extends Component {
-  state = {
-    products: [],
-    token: "",
-    userInfo: {},
-    loading: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+      token: "",
+      userInfo: {},
+      expired: false
+    };
+  }
 
   async componentDidMount() {
     this.setState({
-      loading: false,
       token: "0",
-      userInfo: { uid: "0", dataExpiracao: 0 },
-      products: []
+      userInfo: { uid: "0", dataExpiracao: "3 minutos" },
+      products: [],
+      expired: false
     });
   }
 
   handleTokenClick = async e => {
     e.preventDefault();
 
-    this.setState({ loading: true });
-
     try {
       const { token, userInfo } = await api.post(`Usuario/auth`);
       await api.setTokenOnLogin();
 
+      userInfo.dataExpiracao = "3 minutos";
+
       this.setState({
         token: token,
         userInfo: userInfo,
-        //        products: [],
-        loading: false
+        products: []
       });
     } catch (error) {
     } finally {
@@ -45,20 +49,25 @@ class App extends Component {
   handleListaClick = async e => {
     e.preventDefault();
 
-    this.setState({ loading: true });
-
     try {
       const { data } = await api.get(`Produto/ListaComCategoria`);
       this.setState({ products: data });
     } catch (error) {
+      const { status, statusText } = error.response;
+      if (status === 401 && statusText === "Unauthorized") {
+        this.setState({
+          expired: true,
+          userInfo: { uid: "0", dataExpiracao: "Expirou ..." }
+        });
+      }
     } finally {
-      this.setState({ loading: false });
+      this.setState({ expired: false });
     }
   };
 
   render() {
-    const { products, loading, userInfo } = this.state;
-    //console.log("renders: ", products);
+    const { products, expired, userInfo } = this.state;
+
     return (
       <div>
         <section className="section">
@@ -67,39 +76,23 @@ class App extends Component {
               Gerar Token
             </Button>
             <strong>Token: </strong>
-            <p>{userInfo.uid}</p>
+            <p>{!expired ? userInfo.uid : "0"}</p>
           </div>
           <div className="item minute">
             {" "}
             <Button color="primary" onClick={this.handleListaClick}>
               Listar products
             </Button>{" "}
-            <strong>Expira em: </strong>
-            <p>{userInfo.dataExpiracao}</p>
+            {!expired ? <strong>Expira em: </strong> : "Expirou ..."}
+            {!expired ? <p>{userInfo.dataExpiracao}</p> : ""}
           </div>
         </section>
 
         <div className="container">
           <div className="row">
             <Table>
-              <thead>
-                <tr>
-                  <th>Nome</th>
-                  <th>Descrição</th>
-                  <th>Categoria</th>
-                  <th>Preço</th>
-                </tr>
-              </thead>
-              <tbody>
-                {products.map(item => (
-                  <tr key={item.id}>
-                    <td>item.nome</td>
-                    <td>item.descricao</td>
-                    <td>item.categoriaNome</td>
-                    <td>item.preco</td>
-                  </tr>
-                ))}
-              </tbody>
+              <ListHeader />
+              <ProductList products={products} />
             </Table>
           </div>
         </div>

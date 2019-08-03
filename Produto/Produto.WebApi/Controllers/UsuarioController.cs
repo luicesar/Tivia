@@ -49,7 +49,7 @@ namespace Produto.WebApi.Controllers {
       );
 
       DateTime dataCriacao = DateTime.Now;
-      DateTime dataExpiracao = dataCriacao.AddMinutes (50);
+      DateTime dataExpiracao = dataCriacao.AddMinutes (3);
       user.DataExpiracao = dataExpiracao;
 
       var signinCredentials = new SigningCredentials (

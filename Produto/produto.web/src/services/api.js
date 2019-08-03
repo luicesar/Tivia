@@ -20,6 +20,7 @@ class httpClient {
       .catch(resp => {
         if (resp.response !== undefined && resp.response.status === "401") {
           localStorage.removeItem("@tivia:infouser");
+          return resp.response;
         } else {
           return Promise.reject(resp);
         }
