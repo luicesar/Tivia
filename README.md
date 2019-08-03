@@ -30,7 +30,10 @@ Authorization tokens JWT Bearer
 # How to use:
 You will need the latest Visual Code and the latest .NET Core SDK. Tools can be downloaded from https://dotnet.microsoft.com/download. Also you can run the WebApi in Visual Code (Windows, Linux or MacOS).
 
+- You must create the database named Tivia
 - Example for compiling the web api project: D:\Tivia\Produto\Produto.WebApi> dotnet run
 - Example for run the project web: D:\Tivia\Produto\produto.web> yarn start
+
+if you want to test get, post, and other methods in swagger just generate the token and click on the lock and paste the word "bearer token"
 
 When compiling the project, open it in the browser using the http://localhost:5000/swagger/index.html link where it will display all the end points and ViewModels needed to run the API.
