@@ -20,6 +20,8 @@ using Newtonsoft.Json.Serialization;
 using Produto.Repository.DataContext;
 using Produto.Repository.Interfaces;
 using Produto.Repository.Repositorys;
+using Produto.Service.Interfaces;
+using Produto.Service.Services;
 using Produto.WebApi.Auth;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -93,8 +95,10 @@ namespace Produto.WebApi {
 
         private void _ConfigureInjectionDependecy (IServiceCollection services) {
             services
-                .AddScoped<ICategoriaRepository, CategoriaRepository> ()
-                .AddScoped<IProdutoRepository, ProdutoRepository> ();
+                .AddScoped<ICategoriaRepository, CategoriaRepository>()
+                .AddScoped<IProdutoRepository, ProdutoRepository>()
+                .AddScoped<ICategoriaService, CategoriaService>()
+                .AddScoped<IProdutoService, ProdutoService>();
         }
 
         private void _ConfigureSwagger (IServiceCollection services) {

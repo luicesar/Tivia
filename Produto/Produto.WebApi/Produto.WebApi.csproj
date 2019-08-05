@@ -33,7 +33,8 @@
   </ItemGroup>
 
  <ItemGroup>
-    <ProjectReference Include="..\Produto.Repository\Produto.Repository.csproj" />
+ <ProjectReference Include="..\Produto.Domain\Produto.Domain.csproj" />
     <ProjectReference Include="..\Produto.Shared\Produto.Shared.csproj" />
+    <ProjectReference Include="..\Produto.Service\Produto.Service.csproj" />
   </ItemGroup>
 </Project>

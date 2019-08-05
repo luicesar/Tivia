@@ -19,3 +19,5 @@ D:\Tivia\Produto\Produto.WebApi\obj\Debug\netcoreapp2.2\Produto.WebApi.RazorTarg
 D:\Tivia\Produto\Produto.WebApi\obj\Debug\netcoreapp2.2\Produto.WebApi.csproj.CopyComplete
 D:\Tivia\Produto\Produto.WebApi\obj\Debug\netcoreapp2.2\Produto.WebApi.dll
 D:\Tivia\Produto\Produto.WebApi\obj\Debug\netcoreapp2.2\Produto.WebApi.pdb
+D:\Tivia\Produto\Produto.WebApi\bin\Debug\netcoreapp2.2\Produto.Service.dll
+D:\Tivia\Produto\Produto.WebApi\bin\Debug\netcoreapp2.2\Produto.Service.pdb

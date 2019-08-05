@@ -13,18 +13,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Produto.Domain.Entities;
-using Produto.Repository.Interfaces;
-using Produto.Repository.Models;
 using Produto.Shared.Helpers;
-using Produto.Shared.Repository;
 using Produto.WebApi.Auth;
 using Produto.WebApi.Models;
+using Produto.Repository.Models;
 
 namespace Produto.WebApi.Controllers {
   [Authorize ("Bearer"), Route ("api/[controller]")]
   public class UsuarioController : ControllerBase {
 
-    public UsuarioController (IConfiguration configuration) {
+    public UsuarioController (IConfiguration configuration){
 
     }
 

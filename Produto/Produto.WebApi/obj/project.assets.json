@@ -5743,6 +5743,24 @@
           "bin/placeholder/Produto.Repository.dll": {}
         }
       },
+      "Produto.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.3",
+          "Microsoft.EntityFrameworkCore.Design": "2.2.3",
+          "Microsoft.EntityFrameworkCore.Tools": "2.2.3",
+          "Produto.Domain": "1.0.0",
+          "Produto.Repository": "1.0.0",
+          "Produto.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Produto.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Produto.Service.dll": {}
+        }
+      },
       "Produto.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -9631,7 +9649,7 @@
       ]
     },
     "runtime.native.System.Net.Security/4.3.0": {
-      "sha512": "M2nN92ePS8BgQ2oi6Jj3PlTUzadYSIWLdZrHY1n1ZcW9o4wAQQ6W+aQ2lfq1ysZQfVCgDwY58alUdowrzezztg==",
+      "sha512": "ARfgeRYF2AnYIcqEvy9VE0agN/3zexMMPtcegq1THpOMS63rIGMi706vCo6pbv9Xzw4qhdX1Gu1zyLZHj2WtLA==",
       "type": "package",
       "path": "runtime.native.system.net.security/4.3.0",
       "files": [
@@ -9670,7 +9688,7 @@
       ]
     },
     "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "b3pthNgxxFcD+Pc0WSEoC0+md3MyhRS6aCEeenvNE3Fdw1HyJ18ZhRFVJJzIeR/O/jpxPboB805Ho0T3Ul7w8A==",
+      "sha512": "zWLOQ77Y4FV/6Vw2g+FYzprbQX5/xKvjoCLe4L9159Aw1bSboQoJ1KRZFNdexDooWRAIsLSdE0ZokkrVkwN8Yw==",
       "type": "package",
       "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -9722,7 +9740,7 @@
       ]
     },
     "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "nyFNiCk/r+VOiIqreLix8yN+q3Wga9+SE8BCgkf+2BwEKiNx6DyvFjCgkfV743/grxv8jHJ8gUK4XEQw7yzRYg==",
+      "sha512": "T5NvFgmHX0WH4c7lP72krsnk+IJI10vJf2j2twGE+5QBRA4RyRAgD+ZjEgdmpLOjW4B+nZGaadewTCUcR899OQ==",
       "type": "package",
       "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -9748,7 +9766,7 @@
       ]
     },
     "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "I8bKw2I8k58Wx7fMKQJn2R8lamboCAiHfHeV/pS65ScKWMMI0+wJkLYlEKvgW1D/XvSl/221clBoR2q9QNNM7A==",
+      "sha512": "YWzJvhiC+iLWI/IfpPQUIBhYnAHUFQFRDqR7VDNmPj0b3rjW7dArFqKysZ9v0iSBs9Ih4v9GasLpYCSUwADMQQ==",
       "type": "package",
       "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -9761,7 +9779,7 @@
       ]
     },
     "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
+      "sha512": "1uVTITQP8/cI6YoO6FqfW1pzP0k2TnDZ3TFD88Bu/9H7ZuTsMY9xmadbGpwPu8w8swcd1ifZJsjD9hF9O6C/tg==",
       "type": "package",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -10308,7 +10326,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
+      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -13823,12 +13841,11 @@
       ]
     },
     "System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
+      "sha512": "vOYy7Jv9KsG3ld2hLt0GoERd82SZi4BelrbXLwI9yFBYX7kpbvUCWYo4eyevk47cuJXZ9ZLVAryANcc7iY71aA==",
       "type": "package",
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
@@ -15278,7 +15295,7 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
+      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
@@ -15458,6 +15475,11 @@
       "path": "../Produto.Repository/Produto.Repository.csproj",
       "msbuildProject": "../Produto.Repository/Produto.Repository.csproj"
     },
+    "Produto.Service/1.0.0": {
+      "type": "project",
+      "path": "../Produto.Service/Produto.Service.csproj",
+      "msbuildProject": "../Produto.Service/Produto.Service.csproj"
+    },
     "Produto.Shared/1.0.0": {
       "type": "project",
       "path": "../Produto.Shared/Produto.Shared.csproj",
@@ -15478,7 +15500,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.0",
       "Microsoft.Extensions.Hosting >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Produto.Repository >= 1.0.0",
+      "Produto.Domain >= 1.0.0",
+      "Produto.Service >= 1.0.0",
       "Produto.Shared >= 1.0.0",
       "RestSharp.NetCore >= 105.2.3",
       "Swashbuckle.AspNetCore >= 3.0.0",
@@ -15489,7 +15512,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cesar\\.nuget\\packages\\": {},
+    "C:\\Users\\luisoliveira\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -15498,26 +15521,31 @@
       "projectUniqueName": "D:\\Tivia\\Produto\\Produto.WebApi\\Produto.WebApi.csproj",
       "projectName": "Produto.WebApi",
       "projectPath": "D:\\Tivia\\Produto\\Produto.WebApi\\Produto.WebApi.csproj",
-      "packagesPath": "C:\\Users\\Cesar\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\luisoliveira\\.nuget\\packages\\",
       "outputPath": "D:\\Tivia\\Produto\\Produto.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Cesar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\luisoliveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Tivia\\Produto\\Produto.Repository\\Produto.Repository.csproj": {
-              "projectPath": "D:\\Tivia\\Produto\\Produto.Repository\\Produto.Repository.csproj"
+            "D:\\Tivia\\Produto\\Produto.Domain\\Produto.Domain.csproj": {
+              "projectPath": "D:\\Tivia\\Produto\\Produto.Domain\\Produto.Domain.csproj"
+            },
+            "D:\\Tivia\\Produto\\Produto.Service\\Produto.Service.csproj": {
+              "projectPath": "D:\\Tivia\\Produto\\Produto.Service\\Produto.Service.csproj"
             },
             "D:\\Tivia\\Produto\\Produto.Shared\\Produto.Shared.csproj": {
               "projectPath": "D:\\Tivia\\Produto\\Produto.Shared\\Produto.Shared.csproj"

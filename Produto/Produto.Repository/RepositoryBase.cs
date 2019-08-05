@@ -4,14 +4,14 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Produto.Repository.DataContext;
+using Produto.Repository.Interfaces;
 using Produto.Shared.Entities;
-using Produto.Shared.Repository;
 
 namespace Produto.Repository {
-  public abstract class RepositoryBase<T> : IRepository<T> where T : Entity {
-    private readonly DbContext context;
+  public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : Entity {
+    private readonly ProdutoDataContext context;
 
-    public RepositoryBase (DbContext context) {
+    public RepositoryBase (ProdutoDataContext context) {
       this.context = context;
     }
 

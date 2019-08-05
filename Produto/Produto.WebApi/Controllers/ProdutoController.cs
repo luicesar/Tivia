@@ -5,17 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Produto.Domain.Entities;
-using Produto.Repository.Interfaces;
-using Produto.Shared.Repository;
+using Produto.Service.Interfaces;
 using Produto.WebApi.Models;
 
 namespace Produto.WebApi.Controllers {
     [Authorize ("Bearer"), Route ("api/[controller]")]
     public class ProdutoController : ControllerBase<ProdutoDomain, ProdutoViewModel> {
-        private readonly IProdutoRepository repository;
-        public ProdutoController (IProdutoRepository repository) : base (repository) {
+        private readonly IProdutoService Service;
+        public ProdutoController (IProdutoService service) : base (service) {
 
-            this.repository = repository;
+            this.Service = service;
         }
 
         [HttpGet, Route ("ListaComCategoria")]
@@ -24,12 +23,11 @@ namespace Produto.WebApi.Controllers {
             var lista = new List<ProdutoSlimViewModel> ();
 
             var produtos = new List<ProdutoDomain> ();
-            produtos = repository.GetAll (null, i => i.Categoria).ToList ();
+            produtos = Service.GetAll (null, i => i.Categoria).ToList ();
 
             foreach (var item in produtos) {
 
                 var prodView = new ProdutoSlimViewModel {
-                    Id = item.ID,
                     Nome = item.Nome,
                     Descricao = item.Descricao,
                     Preco = item.Preco,

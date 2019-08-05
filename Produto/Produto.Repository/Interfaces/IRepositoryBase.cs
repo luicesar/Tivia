@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using Produto.Shared.Entities;
 
-namespace Produto.Shared.Repository {
-  public interface IRepository<T> where T : Entity {
+namespace Produto.Repository.Interfaces {
+  public interface IRepositoryBase<T> where T : Entity {
     bool Create (T entity);
     bool Update (int ID, T entity);
     IList<T> GetAll (Expression<Func<T, bool>> predicate);

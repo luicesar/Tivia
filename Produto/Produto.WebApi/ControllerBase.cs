@@ -5,14 +5,14 @@ using System.Linq.Expressions;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Produto.Shared.Entities;
-using Produto.Shared.Repository;
+using Produto.Service.Interfaces;
 using Produto.WebApi.Models;
+using Produto.Shared.Entities;
 
 namespace Produto.WebApi {
   public abstract class ControllerBase<E, M> : Controller where E : Entity where M : IModel<E> {
-    private IRepository<E> repository;
-    public ControllerBase (IRepository<E> repository) {
+    private IServiceBase<E> repository;
+    public ControllerBase (IServiceBase<E> repository) {
       this.repository = repository;
     }
 
